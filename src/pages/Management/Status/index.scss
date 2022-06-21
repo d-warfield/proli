@@ -1,0 +1,28 @@
+.status {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 0 0 0;
+  > button {
+    margin: 2rem;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: Poppins;
+    font-weight: 600;
+    min-width: 100%;
+    padding: 12px 12px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.7rem;
+    height: 6rem;
+  }
+  > h1 {
+    font-size: 3rem;
+  }
+  > img {
+    margin: 0 0 3rem 0;
+    width: 50%;
+  }
+}

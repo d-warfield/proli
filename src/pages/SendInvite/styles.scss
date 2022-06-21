@@ -1,0 +1,124 @@
+.send_invites {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--main-background-color);
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+
+  .credit_cardWrapper {
+    width: 100%;
+    margin: 5rem 0 0 0;
+  }
+
+  .send_inviteTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    position: relative;
+    width: 100%;
+
+    > button {
+      position: absolute;
+      background-color: black;
+      font-family: Poppins;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding: 0 3rem;
+      border-radius: 10rem;
+      border: none;
+      outline: none;
+      padding: 1.5rem 3rem;
+      left: 0;
+    }
+
+    > h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  .send_invitesContainer {
+    margin: 3rem 0 0 0;
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 3rem 3rem;
+    border-radius: 2.2rem;
+    box-shadow: var(--main-box-shadow);
+
+    .invite_text {
+      padding: 0 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+
+      > h1 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 2.5rem;
+      }
+
+      > p {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--snap-light-text);
+      }
+    }
+
+    .reward {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 3rem 0;
+
+      > p {
+        margin: 0 0 0 2rem;
+        color: var(--snap-light-text);
+      }
+
+      .reward_count {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(60, 180, 60);
+        border-radius: 10rem;
+        height: 12rem;
+        min-width: 12rem;
+        max-width: 12rem;
+
+        > p {
+          font-size: 5rem;
+          color: white;
+        }
+        > span {
+          font-size: 5rem;
+          font-weight: 600;
+          color: white;
+        }
+      }
+    }
+
+    > button {
+      width: 100%;
+      background-color: black;
+      color: white;
+      font-family: Poppins;
+      padding: 1.8rem 0;
+      border-radius: 1.2rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+      border: none;
+      outline: none;
+    }
+  }
+}

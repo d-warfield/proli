@@ -1,0 +1,37 @@
+.link__listContainer {
+  height: 100%;
+  overflow: auto;
+
+  @media screen and (min-width: 0) and (max-width: 3000px) {
+    padding: 0 2rem 0 2rem;
+  }
+
+  .characters {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+
+    @media screen and (min-width: 0) and (max-width: 3000px) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      flex-direction: column;
+    }
+    > .no_links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      > h6 {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 13px;
+        color: var(--snap-light-text);
+      }
+    }
+    > .draggable {
+      width: 100%;
+    }
+  }
+}

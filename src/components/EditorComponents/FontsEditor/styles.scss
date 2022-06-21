@@ -1,0 +1,78 @@
+.skins__header {
+  background-color: white;
+}
+
+.fonts__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 1rem 0;
+}
+
+.fonts__wrapper {
+  -ms-overflow-style: none;
+}
+
+.font__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.font__selectorWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+
+  > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  > p {
+    margin: 0.8rem 0 0 0;
+    font-family: Poppins;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--snap-darkmode-light-text);
+  }
+}
+
+.custom__options > button {
+  border: none;
+  outline: none;
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  box-shadow: var(--main-box-shadow);
+  margin: 2rem 0;
+}
+
+.font__selector {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: var(--snap-container);
+  min-width: 100%;
+  box-shadow: var(--main-box-shadow);
+  @media screen and (min-width: 1000px) {
+    min-height: 130px;
+    min-width: 130px;
+  }
+
+  > button {
+    color: white;
+  }
+}

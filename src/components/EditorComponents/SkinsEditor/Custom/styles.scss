@@ -1,0 +1,62 @@
+.custom__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom__containerParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.custom__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+  width: 120px;
+  border-radius: 20px;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+
+  }
+}
+
+.solid {
+  background-color: #dddddd;
+  color: white;
+}
+
+.custom__UploadButtonLabel {
+  font-family: Poppins;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--snap-light-text);
+  padding: 1rem 0 0 0;
+}
+
+.custom__UploadButtonLabelInput {
+  position: absolute;
+  height: 200px;
+  width: 150px;
+  font-family: 50px;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.custom__containerParent > p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-family: Poppins;
+  color: var(--light-purple-text);
+  margin: 0;
+}

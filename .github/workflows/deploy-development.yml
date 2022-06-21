@@ -1,0 +1,70 @@
+name: Deploy development environment on merge
+
+on:
+  push:
+    branches:
+      - development
+
+env:
+  REACT_APP_FB_API_KEY: "AIzaSyCkxLK6l6jjrWB34_mp5vLhlD_mzWNsNHw"
+  REACT_APP_FB_AUTH_DOMAIN: "development-proli.firebaseapp.com"
+  REACT_APP_FB_PROJECT_ID: "development-proli"
+  REACT_APP_FB_STORAGE_BUCKET: "dev-resources.pro.li"
+  REACT_APP_FB_MESSAGING_SENDER_ID: "739815268214"
+  REACT_APP_FB_APP_ID: "1:739815268214:web:71e0c2d6552155ab13a457"
+  REACT_APP_FB_MEASUREMENT_ID: "G-0D7238L3VB"
+  REACT_APP_RESOURCES_BASE_URL: "https://dev-resources.pro.li"
+  REACT_APP_ALGOLIA_APP_ID: "EL2KQRILPD"
+  REACT_APP_ALGOLIA_SEARCH_API_KEY: "f476f8c933b59f080c32c1373889f11d"
+
+jobs:
+  build_and_deploy_frontend:
+    name: Deploy frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: development
+      - run: npm ci && npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROLI_DEVELOPMENT }}'
+          channelId: live
+          projectId: development-proli
+          target: development-proli
+  deploy_functions:
+    name: Deploy functions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: development
+      - name: Install npm packages
+        run: cd functions && npm ci
+      - name: Deploy to functions
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions -P development
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy_firebase_rules:
+    name: Deploy firebase rules
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: development
+      - name: Deploy firestore rules
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only firestore:rules -P development
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Deploy storage rules
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only storage -P development
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

@@ -1,0 +1,29 @@
+.dropdown__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2.2rem 1rem 1rem 1rem;
+}
+
+.dropdown__containerFilled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5 0 0 0;
+}
+
+.dropdown__left > img {
+  height: 100px;
+  border-radius: 8px;
+}
+
+.dropdown__left {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown__right {
+  width: 100%;
+}

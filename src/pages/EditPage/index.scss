@@ -1,0 +1,63 @@
+.edit_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: -10rem 0 0 0;
+
+  > .back_toDashboard {
+    color: var(--snap-light-text);
+    background-color: transparent;
+    margin: 0;
+    padding: 2.5rem 0 0 0;
+  }
+
+  > .new_name {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    > input,
+    input::placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      font-size: 2.5rem;
+      font-family: Poppins;
+      border-radius: 1.5rem;
+      height: 6rem;
+      background-color: #434343;
+      color: #ffffff;
+      text-align: center;
+    }
+    > p {
+      color: #8d8d8d;
+    }
+  }
+
+  > .save_button {
+    width: 80%;
+    height: 6rem;
+    cursor: pointer;
+    &.disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+  }
+
+  > .delete_button {
+    cursor: pointer;
+    margin: 2rem;
+    border-radius: 5rem;
+    background-color: #343434;
+    border: none;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,25 @@
+.affiliate_code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+
+  > h4 {
+    color: var(--snap-dark-text);
+  }
+}
+
+.copied_codeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.copied_code {
+  background-color: var(--snap-light-background);
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 0 40px;
+}

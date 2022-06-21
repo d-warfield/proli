@@ -1,0 +1,70 @@
+name: Deploy production environment on merge
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REACT_APP_FB_API_KEY: "AIzaSyA4sz6s225EtS7FvSNZCe5SsBqG5zgDybc"
+  REACT_APP_FB_AUTH_DOMAIN: "production-proli.firebaseapp.com"
+  REACT_APP_FB_PROJECT_ID: "production-proli"
+  REACT_APP_FB_STORAGE_BUCKET: "resources.pro.li"
+  REACT_APP_FB_MESSAGING_SENDER_ID: "417406477802"
+  REACT_APP_FB_APP_ID: "1:417406477802:web:7d65bb54fdb60b7e10be93"
+  REACT_APP_FB_MEASUREMENT_ID: "G-4VCW5NKFHC"
+  REACT_APP_RESOURCES_BASE_URL: "https://resources.pro.li"
+  REACT_APP_ALGOLIA_APP_ID: "01BO8A0Q4U"
+  REACT_APP_ALGOLIA_SEARCH_API_KEY: "eb212b30331f388db6ae8948bd37fc3c"
+
+jobs:
+  build_and_deploy:
+    name: Deploy frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+      - run: npm ci && npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROLI_PRODUCTION }}'
+          channelId: live
+          projectId: production-proli
+          target: production-proli
+  deploy:
+    name: Deploy functions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Install npm packages
+        run: cd functions && npm ci
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions -P production
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy_firebase_rules:
+    name: Deploy firebase rules
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Deploy firestore rules
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only firestore:rules -P production
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Deploy storage rules
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only storage -P production
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

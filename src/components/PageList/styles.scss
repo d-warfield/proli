@@ -1,0 +1,108 @@
+.page_list {
+  padding: 1rem 0 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 0) and (max-width: 1000px) {
+    padding: 0 0 0 2rem;
+  }
+
+  > .page_listLeft {
+    padding: 2rem 1.5rem 2rem 0;
+
+    > button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      height: 5.2rem;
+      min-width: 5.2rem;
+      border: none;
+      outline: none;
+      border-radius: 10rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.349);
+
+      > .add_page {
+        display: flex;
+        align-items: center;
+        padding: 0 0.6rem 0 0;
+
+        > p {
+          font-family: Poppins;
+          margin: 0 0 0 0.4rem;
+          font-size: 1.7rem;
+          font-weight: 500;
+        }
+
+        > svg {
+          background-color: black;
+          height: 3rem;
+          width: 3rem;
+          border-radius: 10rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  > .page_listRight {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding: 2rem 1rem 2rem 0;
+    z-index: 0;
+
+    > .page_container {
+      > * {
+        cursor: pointer;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #282828;
+      border-radius: 10rem;
+      padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+      margin: 0 1.5rem 0 0;
+      height: 5.2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.11);
+      z-index: 2;
+
+      &.active {
+        background-color: white;
+
+        > button {
+          > p {
+            color: black;
+          }
+
+          .default_home {
+            margin: 0 0 0 0.4rem;
+          }
+        }
+      }
+
+      .page_breaker {
+        border-right: 1px solid var(--snap-darkmode-light-text);
+        min-height: 100%;
+      }
+      > button {
+        display: flex;
+        align-items: center;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 0 1.5rem 0 1.5rem;
+
+        > p {
+          margin: 0;
+          font-family: Poppins;
+          color: var(--snap-darkmode-light-text);
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

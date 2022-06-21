@@ -1,0 +1,79 @@
+@media screen and (min-width: 0px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    background-color: #101010;
+    width: 100%;
+    min-height: 8%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+
+    > .header_content {
+      display: flex;
+      max-width: 600px;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 2rem;
+
+      > .header_right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        > p {
+          text-decoration: underline;
+          margin: 0 0 0 0.6rem;
+          font-size: 1.6rem;
+          color: white;
+        }
+
+        > .copy_userUrl {
+          width: 10rem;
+          cursor: pointer;
+        }
+
+        > button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #282828;
+          color: white;
+          border-radius: 1.2rem;
+          height: 4.5rem;
+          padding: 0 2rem;
+          border: none;
+          outline: none;
+          font-family: Poppins;
+          font-weight: 500;
+          font-size: 1.7rem;
+        }
+      }
+
+      > .header_left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: #282828;
+          margin: 0 0 0 1rem;
+          border-radius: 10rem;
+          height: 4.5rem;
+          min-width: 4.5rem;
+          max-width: 4.5rem;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow write, update, delete, create, read: if false;
+    }
+    match /public/{username} {
+  		match /{document=**} {
+    		allow create, write, update, delete: if request.auth != null &&
+        get(/databases/$(database)/documents/private/$(request.auth.uid)).data.username == username;
+        allow read: if true;
+    }
+  }
+  match /private {
+  		match /{uid}/{document=**} {
+    		allow write, update, delete, create, read: if request.auth != null &&
+        request.auth.uid == uid;
+      }
+    }
+  match /analytics {
+  		match /{document=**} {
+    		allow create;
+      }
+    }
+  }
+}

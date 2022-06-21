@@ -1,0 +1,85 @@
+.editor {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  @media screen and (min-width: 1000px) {
+    width: 100%;
+  }
+
+  .editor_optionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 10px;
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 2rem;
+
+      background-color: var(--main-background-color);
+    }
+
+    background-color: var(--main-background-color);
+  }
+}
+.editor__options {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 0 0 0 1rem;
+
+  > .main__optionsContainer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    > button {
+      width: 100%;
+      min-width: 12rem;
+    }
+  }
+}
+
+.header__buttonsContainer {
+  overflow: hidden;
+}
+
+.custom__optionsButton {
+  display: flex;
+  overflow: scroll;
+
+  > button {
+    margin: 2rem 2rem 2rem 0;
+  }
+}
+
+.editor__buttonSelected {
+  background-color: black;
+  border: none;
+  outline: none;
+  font-family: Poppins;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  margin: 5px 5px;
+}
+
+.xmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: createBox 0.3s;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

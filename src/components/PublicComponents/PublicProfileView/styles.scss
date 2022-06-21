@@ -1,0 +1,320 @@
+.public__profileContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.public__phoneWrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.363);
+  > .edit_profileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem 1rem;
+    transition: top 0.3s;
+
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.507);
+    > button {
+      background-color: rgba(255, 255, 255, 0.507);
+      border: none;
+      outline: none;
+      font-family: Poppins;
+      color: black;
+      padding: 1rem 3rem;
+      border-radius: 10rem;
+    }
+  }
+
+  > .public_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem 1rem;
+    transition: top 0.3s;
+
+    > .public_headerControls {
+      display: flex;
+
+      > .edit_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        outline: none;
+        border: none;
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 1.7rem;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+
+        > span {
+          margin: 0 0 0 0.8rem;
+        }
+      }
+
+      .register_onProfile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.507);
+        backdrop-filter: blur(3px);
+        color: white;
+        height: 4.5rem;
+        border-radius: 10rem;
+        margin: 0 0.6rem;
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 0 2rem;
+      }
+      > .header_buttonControl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.507);
+        backdrop-filter: blur(3px);
+        color: white;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 10rem;
+        margin: 0 0.6rem;
+      }
+    }
+
+    .public_headerLeft {
+      @media screen and (min-width: 1000px) {
+        display: none;
+      }
+      > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.507);
+        backdrop-filter: blur(3px);
+        color: white;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 10rem;
+      }
+    }
+  }
+  > .profile_backgroundImage {
+    width: 100%;
+    max-width: 600px;
+
+    -webkit-mask-image: linear-gradient(to top, transparent 2%, white 49%);
+    mask-image: linear-gradient(to top, transparent 2%, white 49%);
+
+    > .profile_picture_placeholder {
+      width: 100%;
+      height: 40rem;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > img {
+        height: 15rem;
+        margin: 0 0 -50px 0;
+      }
+    }
+
+    > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  > .profile {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 2rem 0 2rem;
+    margin: 0 0 2rem 0;
+    z-index: 2;
+
+    > .profile_right {
+      margin: 0 0 0 auto;
+
+      > button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: none;
+        outline: none;
+        border-radius: 10rem;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.089);
+
+        width: 100%;
+        margin: 0 1rem 0 0;
+        font-size: 1.7rem;
+        > svg {
+          margin: 0 0.8rem 0 0;
+        }
+      }
+    }
+
+    > .profile_left {
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem 0 0;
+      height: 100%;
+
+      > h4 {
+        margin: 0;
+        font-size: 2.4rem;
+      }
+      > p {
+        margin: 0;
+      }
+      > .profile_socialIcons {
+        display: flex;
+        padding: 1.8rem 0;
+        margin: 0 0 0 -0.5rem;
+        > div {
+          cursor: pointer;
+        }
+      }
+
+      > .location_container {
+        display: flex;
+        align-items: center;
+
+        > p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    > .profile_textAnalytics {
+      display: flex;
+      padding: 0.2rem 0 0.2rem0;
+      justify-content: flex-start;
+
+      > .profile_buttonAnalytics {
+        display: flex;
+        align-items: center;
+        margin: 0 1.5rem 0 0;
+
+        > h4 {
+          margin: 0;
+          padding: 0 0.4rem 0 0;
+          font-size: 1.5rem;
+          font-weight: 800;
+        }
+
+        > p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.popup__notification {
+  display: flex;
+  width: 100%;
+  position: absolute;
+}
+
+.bio_description {
+  font-size: 1.4rem;
+}
+
+.copy__UrlButton {
+  background-color: white;
+  outline: none;
+  border: none;
+  min-height: 4rem;
+  min-width: 10rem;
+  border-radius: 10rem;
+  font-family: Poppins;
+  font-weight: 600;
+  color: var(--snap-dark-text);
+  padding: 5px 20px;
+  margin: 0 0 0 1.2rem;
+}
+
+.link__buttonContainerList {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1rem 0 1rem;
+  margin: 0;
+
+  .page_scroll {
+    display: flex;
+    width: 100%;
+    padding: 3rem 0 2rem 0;
+    overflow: scroll;
+    > button {
+      border: none;
+      outline: none;
+      border-radius: 10rem;
+      padding: 1rem 2rem;
+      margin: 0 1rem 0 0;
+      font-family: Poppins;
+      &.active_page {
+        font-weight: 600;
+      }
+    }
+  }
+  > .link__buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    min-height: 75px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.profile_notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  min-height: 100%;
+  margin-top: -100px;
+
+  > button {
+    margin: 3rem 0 0 0;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-family: Poppins;
+    padding: 1.8rem 2.5rem 1.8rem 2.5rem;
+    border-radius: 5rem;
+  }
+
+  > p {
+    color: white;
+  }
+}

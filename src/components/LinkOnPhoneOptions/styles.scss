@@ -1,0 +1,59 @@
+.link_phoneOptions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 450px;
+  z-index: 1000000 !important;
+  background-color: rgba(27, 27, 27, 0.74);
+  backdrop-filter: blur(20px);
+  padding: 0 4rem;
+
+  .link_phoneOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > button {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 2rem 0;
+
+      > span {
+        font-family: Poppins;
+        font-size: 1.7rem;
+        color: white;
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+
+  .close_linkOptions {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 10rem 0;
+    > button {
+      background-color: rgba(255, 255, 255, 0.658);
+      backdrop-filter: blur(10px);
+
+      color: white;
+      padding: 1.8rem 3rem;
+      border: none;
+      outline: none;
+      font-family: Poppins;
+      border-radius: 10rem;
+      line-height: 1;
+      font-size: 1.7rem;
+    }
+  }
+}

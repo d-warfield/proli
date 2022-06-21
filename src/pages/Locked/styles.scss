@@ -1,0 +1,44 @@
+.locked__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 0 20px;
+
+  > h4 {
+    margin-top: -3rem;
+    color: var(--snap-dark-text);
+  }
+  > button {
+    background-color: black;
+    border: none;
+    outline: none;
+    width: 20rem;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 10px;
+    padding: 2rem 0 2rem 0;
+    border-radius: 5rem;
+    font-family: Poppins;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .maybe__laterButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    min-width: 100%;
+    color: var(--snap-dark-background);
+    margin-bottom: 10px;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-family: Poppins;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+}

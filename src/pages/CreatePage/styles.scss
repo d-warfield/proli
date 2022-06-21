@@ -1,0 +1,52 @@
+.create_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+
+  > .back_toDashboard {
+    color: var(--snap-light-text);
+    background-color: transparent;
+    margin: 0;
+    padding: 2.5rem 0 0 0;
+  }
+
+  > input,
+  input::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    font-family: Poppins;
+    width: 100%;
+    max-width: 30rem;
+    border-radius: 1.5rem;
+    height: 6rem;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+  }
+
+  > button {
+    margin: 4rem 0 0 0;
+    border: none;
+    outline: none;
+    padding: 1.6rem 5rem;
+    border-radius: 1.2rem;
+    color: black;
+    font-family: Poppins;
+    font-size: 1.7rem;
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+    &.disabled {
+      cursor: not-allowed;
+      background-color: gray;
+    }
+  }
+}

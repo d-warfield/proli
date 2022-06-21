@@ -1,0 +1,24 @@
+.affiliate__inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--snap-dark-background);
+  font-family: Poppins;
+  font-size: 13px;
+  background-color: var(--snap-light-background);
+  height: 100%;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 100%;
+}
+
+.affiliate__inputContainer > input {
+  color: var(--snap-dark-background);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: Poppins;
+  text-align: center;
+  font-weight: 500;
+}

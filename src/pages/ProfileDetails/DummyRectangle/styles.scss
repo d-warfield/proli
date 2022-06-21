@@ -1,0 +1,35 @@
+.dummy_buttonContainer {
+  display: flex;
+  align-items: center;
+  max-height: 7.5rem;
+  max-width: 100%;
+  padding: 2rem;
+  background: var(--snap-button);
+  border-radius: 2rem;
+
+  margin: 0 0 1rem 0;
+
+  > .dummy_buttonLeft {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .dummy_buttonRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    margin: 0 0 0 1rem;
+    // background-color: rgba(255, 255, 255, 0.247);
+    // box-shadow: 0 1px 10px rgba(185, 185, 185, 0.116);
+    > p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
+}

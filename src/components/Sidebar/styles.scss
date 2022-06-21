@@ -1,0 +1,120 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background: var(--main-background-color);
+
+  .settings_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #101010;
+    > h4 {
+      margin: 2rem 0;
+      color: white;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      margin: 0 2rem 0 0;
+      border: none;
+      outline: none;
+      color: white;
+      background-color: rgb(48, 48, 48);
+      font-family: Poppins;
+      padding: 0.8rem;
+      border-radius: 10rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+
+      > svg {
+        background-color: rgb(48, 48, 48);
+        border-radius: 10rem;
+      }
+    }
+  }
+
+  .profile_sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 0 0 2rem;
+    padding: 2rem 0 2rem 0;
+
+    .profile_sidebarLeft {
+      > img {
+        max-height: 8rem;
+        min-height: 8rem;
+        min-width: 8rem;
+        max-width: 8rem;
+        object-fit: cover;
+        border-radius: 1.8rem;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+      }
+    }
+
+    .profile_sidebarRight {
+      margin: 0;
+      > h1 {
+        margin: 0;
+        color: white;
+        font-size: 1.9rem;
+      }
+      > p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.527);
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .logout_button {
+    padding: 5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    > button {
+      border: none;
+      outline: none;
+      background-color: white;
+      font-family: Poppins;
+      padding: 1.5rem 5rem;
+      border-radius: 10rem;
+      font-size: 1.7rem;
+
+      font-weight: 600;
+    }
+  }
+  .side_barOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.1rem 0;
+
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem 2rem;
+      font-family: Poppins;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: white;
+      border-bottom: 1px solid rgb(56, 56, 56);
+
+      > span {
+        margin: 0 0 0 1rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

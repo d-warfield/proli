@@ -1,0 +1,140 @@
+.themesContainer {
+  > .profile__containerEditor {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+    padding: 0 1.5rem 3rem 0;
+    min-height: 100%;
+    margin: 0;
+    max-width: 600px;
+
+    > .personal_infoContainer {
+      margin: 0 0 3rem 0;
+      > h6 {
+        font-family: Poppins;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}
+
+.profile_image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 3rem 0;
+}
+
+.loading__animation {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 100px;
+  -webkit-animation: fadeinout 6s linear forwards;
+  animation: fadeinout 5s linear forwards;
+}
+
+.name__input {
+  padding: 0 0 0 1rem;
+
+  width: 100%;
+  > input {
+    background-color: var(--snap-container);
+    text-align: center;
+    outline: none;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 14px;
+    color: white;
+    margin: 0 0 2rem 0;
+    outline: none;
+    border: none;
+    box-shadow: var(--snap-box-shadow);
+
+    height: 5.5rem;
+    border-radius: 1rem;
+  }
+
+  > input::placeholder {
+    color: white;
+  }
+
+  > p {
+    margin: 0;
+  }
+}
+
+.replace__buttonProfileEditor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  height: 5.5rem;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: var(--snap-box-shadow);
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.profile_inputContainer {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 0;
+  padding: 0 0.1rem 0.1rem 1.2rem;
+  background-color: var(--snap-container);
+  box-shadow: var(--main-box-shadow);
+
+  border-radius: 1rem;
+
+  > h6 {
+    color: var(--snap-dark-text);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 0.8rem 0;
+  }
+  > input {
+    padding: 0 0 0 1rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 14px;
+    color: black;
+    outline: none;
+    border: none;
+    color: white;
+    height: 5.5rem;
+
+    > input::placeholder {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "plugins": ["react-hooks"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": 0,
+    "no-unused-vars": 1
+  }
+}

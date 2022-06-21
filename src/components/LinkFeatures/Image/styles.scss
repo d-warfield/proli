@@ -1,0 +1,72 @@
+.link__featureButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+}
+
+.link__featureButton > button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  margin: 0;
+  border: none;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.link__featureButton > button:hover {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  margin: 0;
+  border: none;
+  outline: none;
+  transform: scale(1.15);
+}
+
+.input__fileLinkImage {
+  background-color: red;
+  position: absolute;
+  transition: all 0.15s ease-in-out;
+}
+
+.feature__iconButton {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 18px !important;
+  min-width: 20px !important;
+  transition: all 0.12s ease-in-out !important;
+}
+
+.feature__iconButton:hover {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 18px !important;
+  min-width: 20px !important;
+  transform: scale(1.15) !important;
+}
+
+@media screen and (min-width: 0) and (max-width: 3000px) {
+  .feature__iconButton {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 18px !important;
+    min-width: 20px !important;
+    transition: all 0.12s ease-in-out !important;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 3000px) {
+  .feature__iconButton:hover {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 18px !important;
+    min-width: 20px !important;
+    transform: scale(1) !important;
+  }
+}

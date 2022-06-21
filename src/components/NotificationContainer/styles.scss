@@ -1,0 +1,53 @@
+.notification__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  border-bottom: 1px solid #33333362;
+}
+
+.notification__containerLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.notification__containerLeft > img {
+  max-height: 6rem;
+  min-height: 6rem;
+  max-width: 6rem;
+  min-width: 6rem;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.notification__containerRight {
+  min-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 2rem;
+}
+
+.notification__container > a {
+  margin: 0;
+  padding: 0;
+}
+
+.notification__follower > h4 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: white;
+  margin: 0;
+}
+
+.notification__follower > p {
+  font-size: 1.5rem;
+  color: var(--snap-darkmode-light-text);
+  margin: 0;
+}
